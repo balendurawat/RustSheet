@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RUST FOR BLOCKCHAIN DEVELOPERS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="prism.css" />
+
+    <script src="prism.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <span class="logo"><img src="logo.png" alt="" /></span>
+
+      <div class="content center">This is my RUST Sheet</div>
+    </nav>
+
+    <div class="container">
+      <ol>
+        <li>
+          Install Rust
+          <pre class="language-rust"><code>Install Rust</code></pre>
+        </li>
+        <!--  -->
+        <br>
+        <li>
+          Creating a function
+          <pre class="language-rust">
+<code>fn main(){
+    let number =3;
+    println!("{}", num);    
+}
+</code></pre>
+        </li>
+
+
+        <!--  -->
+        <br>
+        <li>
+          Variables- in the above example we had used 'num' which means we are
+          using it somewhere else.But what if we had written something as below.
+          <pre class="language-rust">
+<code>fn main(){
+    let number = 3; 
+}
+</code></pre>
+          This would have given an error. As we have declared the variable but
+          not used it. So if we had to intentionally declare but not use a
+          variable we simply need to put an underscore symbol before it as shown
+          below.
+          <pre class="language-rust">
+<code>fn main() {
+    let _number = 3;
+}</code></pre>
+        </li>
+
+        <!--        -->
+        <br>
+        <li>
+          print Statement - we use a keyword 'println!' with that exclamation
+          sign. For any print we have to provide with the string literal as
+          shown below otherwise be ready for an error.
+          <pre class="language-rust">
+<code>fn main(){
+let number = 3;
+println!("{}", number)
+}
+</code></pre>
+        </li>
+      
+    
+    <!--  -->
+
+    <br>
+    <li>
+        Varibales in Rust are immutable. The code below will throw error.
+        <pre class="language-rust">
+<code>fn main(){
+let number = 3;
+number = 6;
+println!("{}", number)
+}
+</code></pre>
+    The variable are immutable in order to ensure - safety, concurrency and speed.
+      </li>
+
+
+
+      <!--  -->
+      <br>
+      <li>
+        To make variable mutable we need to add a keyword called 'mut'.
+        <pre class="language-rust">
+<code>fn main(){
+let mut number = 3;
+number = 6;
+println!("{}", number)
+}
+</code></pre>
+
+      </li>
+
+
+
+      <!--  -->
+      <br>
+      <li>
+        Another way to make a variable is 'const' which means we will never change the value. 'const' values are much more faster than let.
+        <pre class="language-rust">
+<code>fn main(){
+    const PIE:f64 = 3.14;
+    let area = PIE * 10 *10;
+    println!("The area of circle is {}", area);
+}
+</code></pre>
+    In this example you can see how to print with a message.
+
+      </li>
+
+
+
+      <!--  -->
+      <br>
+      <li>
+        We always need to have a main function in our program. Lets see if we didnt have a main function. This will give error.
+        <pre class="language-rust">
+<code>fn display(){
+let mut number = 3;
+number = 6;
+println!("{}", number)
+}
+</code></pre>
+Lets see an another example with main and other function.
+<pre class="language-rust">
+<code>fn main() {
+    display();    
+}
+fn display() {
+    let mut number = 3;
+    number = 6;
+    println!("{}", number)  
+}
+
+</code></pre>
+Now this function will work.
+      </li>
+
+    
+    <!--  -->
+    
+    
+    <br>
+      <li>
+        Passing values through function.
+        <pre class="language-rust">
+<code>fn main() {
+    display(1,2);    
+}
+
+fn display(num1:i32, num2:i32){
+    println!("The value of num1 is {} and num2 is {}", num1, num2);
+}
+</code></pre>
+We need to provide the data type in the function header whenever we need to get a value like here we used is 'i32' which means a signed integer of size 32bits. 
+
+      </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </ol>
+    </div>
+  </body>
+</html>
