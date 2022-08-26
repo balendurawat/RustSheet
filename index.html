@@ -264,12 +264,53 @@ Tuple -> We can have values of multiple type unlike where only same type of data
 </code>
 </pre>
 
+If we want to make a tuple muttable just add the keyword 'mut'. But when changing the value at any index, make sure you replace the value with same type otherwise that will be an error.
+<pre class="language-rust">
+<code>fn main() {
+  let mut tupple = (1.12, 99, false, 'z');
+  tupple.2 = 5; //this is error as originally 2 index hold a boolean and we are replacing it with integer
+  println!("{}", tupple.1);
+}
+</code>
+</pre>
+</li>
 
+
+<br />
+        <li>
+          if else
+          <pre class="language-rust">
+<code>fn main(){
+let age:i8 = 19;
+if age >= 18{
+  println!("you can vote");
+} else {
+  println!("you cannot vote")
+    }
+}
+</code></pre>
         </li>
 
 
 
-
+        <br />
+        <li>
+          Looping
+          <pre class="language-rust">
+<code>fn main(){
+     let mut counter = 0; // mut because we want to increase the value after iteration
+     
+     loop {
+      counter = counter+1;
+      println!("Hello World!");
+      if counter == 5{
+        break;
+      }
+     }
+}
+</code></pre>
+          In this example you can see how to print with a message.
+        </li>
 
 
 
