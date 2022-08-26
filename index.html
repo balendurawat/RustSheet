@@ -39,7 +39,7 @@
           <pre class="language-rust"><code>Install Rust</code></pre>
         </li>
         <!--  -->
-        <br>
+        <br />
         <li>
           Creating a function
           <pre class="language-rust">
@@ -50,9 +50,8 @@
 </code></pre>
         </li>
 
-
         <!--  -->
-        <br>
+        <br />
         <li>
           Variables- in the above example we had used 'num' which means we are
           using it somewhere else.But what if we had written something as below.
@@ -72,7 +71,7 @@
         </li>
 
         <!--        -->
-        <br>
+        <br />
         <li>
           print Statement - we use a keyword 'println!' with that exclamation
           sign. For any print we have to provide with the string literal as
@@ -84,71 +83,65 @@ println!("{}", number)
 }
 </code></pre>
         </li>
-      
-    
-    <!--  -->
 
-    <br>
-    <li>
-        Varibales in Rust are immutable. The code below will throw error.
-        <pre class="language-rust">
+        <!--  -->
+
+        <br />
+        <li>
+          Varibales in Rust are immutable. The code below will throw error.
+          <pre class="language-rust">
 <code>fn main(){
 let number = 3;
 number = 6;
 println!("{}", number)
 }
 </code></pre>
-    The variable are immutable in order to ensure - safety, concurrency and speed.
-      </li>
+          The variable are immutable in order to ensure - safety, concurrency
+          and speed.
+        </li>
 
-
-
-      <!--  -->
-      <br>
-      <li>
-        To make variable mutable we need to add a keyword called 'mut'.
-        <pre class="language-rust">
+        <!--  -->
+        <br />
+        <li>
+          To make variable mutable we need to add a keyword called 'mut'.
+          <pre class="language-rust">
 <code>fn main(){
 let mut number = 3;
 number = 6;
 println!("{}", number)
 }
 </code></pre>
+        </li>
 
-      </li>
-
-
-
-      <!--  -->
-      <br>
-      <li>
-        Another way to make a variable is 'const' which means we will never change the value. 'const' values are much more faster than let.
-        <pre class="language-rust">
+        <!--  -->
+        <br />
+        <li>
+          Another way to make a variable is 'const' which means we will never
+          change the value. 'const' values are much more faster than let.
+          <pre class="language-rust">
 <code>fn main(){
     const PIE:f64 = 3.14;
     let area = PIE * 10 *10;
     println!("The area of circle is {}", area);
 }
 </code></pre>
-    In this example you can see how to print with a message.
+          In this example you can see how to print with a message.
+        </li>
 
-      </li>
-
-
-
-      <!--  -->
-      <br>
-      <li>
-        We always need to have a main function in our program. Lets see if we didnt have a main function. This will give error.
-        <pre class="language-rust">
+        <!--  -->
+        <br />
+        <li>
+          We always need to have a main function in our program. Lets see if we
+          didnt have a main function. This will give error.
+          <pre class="language-rust">
 <code>fn display(){
 let mut number = 3;
 number = 6;
 println!("{}", number)
 }
 </code></pre>
-Lets see an another example with main and other function.
-<pre class="language-rust">
+          Lets see an another example with main and other function.
+          <pre class="language-rust">
 <code>fn main() {
     display();    
 }
@@ -159,17 +152,15 @@ fn display() {
 }
 
 </code></pre>
-Now this function will work.
-      </li>
+          Now this function will work.
+        </li>
 
-    
-    <!--  -->
-    
-    
-    <br>
-      <li>
-        Passing values through function.
-        <pre class="language-rust">
+        <!--  -->
+
+        <br />
+        <li>
+          Passing values through function.
+          <pre class="language-rust">
 <code>fn main() {
     display(1,2);    
 }
@@ -178,15 +169,15 @@ fn display(num1:i32, num2:i32){
     println!("The value of num1 is {} and num2 is {}", num1, num2);
 }
 </code></pre>
-We need to provide the data type in the function header whenever we need to get a value like here we used is 'i32' which means a signed integer of size 32bits. 
+          We need to provide the data type in the function header whenever we
+          need to get a value like here we used is 'i32' which means a signed
+          integer of size 32bits.
+        </li>
 
-      </li>
-    
-    
-      <br>
-      <li>
-        Let's now see how to use return a value from a function.
-        <pre class="language-rust">
+        <br />
+        <li>
+          Let's now see how to use return a value from a function.
+          <pre class="language-rust">
 <code>fn main() {
   println!("{}", display(5,8));  
 }
@@ -194,8 +185,9 @@ fn display(a:i32, b:i32) -> i32 {
   return a*b;
 }
 </code></pre>
-There is also a way to do this like without even using the return keyword.
-<pre class="language-rust">
+          There is also a way to do this like without even using the return
+          keyword.
+          <pre class="language-rust">
 <code>fn main() {
     println!("{}", display(5,8));  
 }
@@ -203,50 +195,115 @@ fn display(a:i32, b:i32) {
     a*b
 }
 </code></pre>
-Note that we have used semicolon in the line where we are doing the multiplication.
-      </li>
+          Note that we have used semicolon in the line where we are doing the
+          multiplication.
+        </li>
 
-    
-      <br>
-      <li>
-        Rust doesn't allow uninitialized variable and gives error. It is a way to ensure the memory safety.
-        <pre class="language-rust">
+        <br />
+        <li>
+          Rust doesn't allow uninitialized variable and gives error. It is a way
+          to ensure the memory safety.
+          <pre class="language-rust">
 <code>fn main(){
     let number;
     println!("{}", number);
 }
 </code></pre>
-      </li>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    </ol>
+        </li>
+
+        <br />
+        <li>
+          Signed vs Unsigned Integer. We use the prefix 'i' in signed integer
+          type and 'u' in unsigned interger type.
+          <pre class="language-rust">
+<code>signed - i8, i16, i32, i64, isize
+unsigned - u8, u16, u32, u64, usize
+</code></pre>
+          <pre class="language-rust">
+<code>signed - Range -> -2^(n-1) to 2^(n-1)-1
+unsigned - 0 to 2^(n)-1
+  </code></pre>
+        </li>
+
+
+
+
+        <br />
+        <li>
+          In rust we have two data types: Scalar and Compound.
+          Scalar data types comprise of: Integer, Floating Point Number, Char, Boolean. Let's see all in an example.
+          <pre class="language-rust">
+<code>fn main() {
+  let a:u8 = 2; // this is an unsigned integer
+  let b: i8 = 10; // this is a signed integer
+
+  let c:f32 = 55.00; // this is float type
+  let d = 'A'; // this is char data type
+  let e:bool = true;
+  println!(" Values of a, b, c, d and e are {}, {}, {}, {}, and {}", a,b,c,d, e);
+}
+</code></pre>
+
+Compound data types:
+Array : Same type of values can be stored. Indexing starts from zero.
+<pre class="language-rust">
+<code>fn main() {
+  let mut array = [1,2,3] ; // we can eliminate mut if we dont want to update the array later
+  array[1] = 3;
+  println!("{}", arr[1]);
+}
+</code>
+</pre>
+
+Tuple -> We can have values of multiple type unlike where only same type of data can be stored. Indexing works same as in case of array.
+<pre class="language-rust">
+<code>fn main() {
+  let tupple = (1.12, 99, false, 'z');
+  println!("{}", tupple.1);
+}
+</code>
+</pre>
+
+
+        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ol>
     </div>
   </body>
 </html>
