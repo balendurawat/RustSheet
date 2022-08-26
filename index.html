@@ -183,9 +183,40 @@ We need to provide the data type in the function header whenever we need to get 
       </li>
     
     
+      <br>
+      <li>
+        Let's now see how to use return a value from a function.
+        <pre class="language-rust">
+<code>fn main() {
+  println!("{}", display(5,8));  
+}
+fn display(a:i32, b:i32) -> i32 {
+  return a*b;
+}
+</code></pre>
+There is also a way to do this like without even using the return keyword.
+<pre class="language-rust">
+<code>fn main() {
+    println!("{}", display(5,8));  
+}
+fn display(a:i32, b:i32) {
+    a*b
+}
+</code></pre>
+Note that we have used semicolon in the line where we are doing the multiplication.
+      </li>
+
     
-    
-    
+      <br>
+      <li>
+        Rust doesn't allow uninitialized variable and gives error. It is a way to ensure the memory safety.
+        <pre class="language-rust">
+<code>fn main(){
+    let number;
+    println!("{}", number);
+}
+</code></pre>
+      </li>
     
     
     
